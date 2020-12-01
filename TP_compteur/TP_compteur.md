@@ -1,6 +1,6 @@
 # TP compteur
 
-Dans ce TP, nous allons réaliser un compteur/décompteur synchrone sur 4 bits avec reset asynchrone et signal d'activation. 
+Dans ce TP, nous allons réaliser un compteur synchrone sur 4 bits avec reset asynchrone et signal d'activation. 
 
 # Description VHDL
 
@@ -12,12 +12,12 @@ Le schéma en bloc du module est le suivant :
 * **rst** : reset qui remet à sortie la sortie du compteur indépendemment de l'état de l'horloge
     - si 1 : remise à zéro de la sortie
     - si 0 : rien
-* **en** : activation (enable) du compteur/décompteur
-    - si 1 : le compteur/décompteur compte
-    - si 0 : le compteur/décompteur ne fait rien (garde la même valeur)
+* **en** : activation (enable) du compteur
+    - si 1 : le compteur compte
+    - si 0 : le compteur ne fait rien (garde la même valeur)
 * **inc** : choix de l'incrément ou décrément du compteur
-    - si 1 : le compteur compte de 0 à 15
-    - si 0 : le compteur compte de 15 à 0
+    - si 1 : le compteur va de 0 à 15
+    - si 0 : le compteur va de 15 à 0
 * **s** : sortie du compteur
 
 - [ ] Le nom du module et du fichier est : **compteur_4b**
