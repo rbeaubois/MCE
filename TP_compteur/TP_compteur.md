@@ -6,7 +6,7 @@ Dans ce TP, nous allons réaliser un compteur/décompteur synchrone sur 4 bits a
 
 Le schéma en bloc du module est le suivant :
 
-![compteur_4b](images/compteur_4b.png)
+![compteur_4b](TP_compteur/images/compteur_4b.PNG)
 
 * **clk** : horloge qui cadence l'incrément ou décrément du compteur
 * **rst** : reset qui remet à sortie la sortie du compteur indépendemment de l'état de l'horloge
@@ -56,7 +56,7 @@ Créer un script.do qui simule tous les cas possibles et vérifier la sortie.
 
 Le fichier **test_carte.vhd** utilise le compteur que vous venez de décrire pour générer la commande du transcodeur 7 segments que vous avez décrit la semaine précédente. Ainsi, la sortie de votre compteur allant de 0 à 15 sera affichée sur les afficheurs de votre carte.
 
-![compteur_4b](images/test_carte.png)
+![compteur_4b](TP_compteur/images/test_carte.PNG)
 
 A l'aide de Quartus synthésier et implémenter le module **test_carte.vhd** avec les entrées et sorties connectées de la façon suivante :
 * **clk**           : BTN0
