@@ -6,7 +6,7 @@ Dans ce TP, nous allons réaliser un compteur/décompteur synchrone sur 4 bits a
 
 Le schéma en bloc du module est le suivant :
 
-![](TP_compteur/images/compteur_4b.PNG)
+![compteur_4b](TP_compteur/images/compteur_4b.PNG)
 
 * **clk** : horloge qui cadence l'incrément ou décrément du compteur
 * **rst** : reset qui remet à sortie la sortie du compteur indépendemment de l'état de l'horloge
