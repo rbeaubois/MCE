@@ -32,8 +32,6 @@ Le schéma en bloc du module est le suivant :
 >	|	if ... then
 >	|	|	if ... then
 >	|	|	|
->	|	|	else
->   |   |   |
 >	|	|	end if;
 >	|	end if;
 >	end process; 
