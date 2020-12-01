@@ -12,7 +12,7 @@ Le dossier contient les fichiers suivants :
 
 # Description VHDL
 
-Décrire le module VHDL du compteur à partir du schéma bloc du module qui est le suivant à partir du fichier **compteur_4b.vhd**:
+Décrire le module VHDL du compteur en complétant le fichier **compteur_4b.vhd** à partir du schéma bloc du module :
 
 ![compteur_4b](https://github.com/rbeaubois/MCE/blob/master/TP_compteur/images/compteur_4b.PNG)
 
