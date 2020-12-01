@@ -58,11 +58,11 @@ Compléter le script **compteur_4b.do** pour simuler tous les cas possibles et v
 
 # Implémentation
 
-Le fichier **test_carte.vhd** utilise le compteur que vous venez de décrire pour générer la commande du transcodeur 7 segments que vous avez décrit la semaine précédente. Ainsi, la sortie de votre compteur variant entre 0 et 15 sera affichée sur les afficheurs de votre carte. L'horloge sera simuler par l'appui sur un bouton qui va générer un front montant à l'appui. 
+Le fichier **test_carte.vhd** utilise le compteur que vous venez de décrire pour générer la commande du transcodeur 7 segments que vous avez décrit la semaine précédente. Ainsi, la sortie de votre compteur variant entre 0 et 15 sera affichée sur les afficheurs de votre carte. L'horloge sera simulé par un bouton qui va générer un front montant à l'appui. 
 
 ![test_carte](https://github.com/rbeaubois/MCE/blob/master/TP_compteur/images/test_carte.PNG)
 
-A l'aide de Quartus synthésier et implémenter le module **test_carte.vhd** avec les entrées et sorties connectées de la façon suivante :
+A l'aide de Quartus synthésiser et implémenter le module **test_carte.vhd** avec les entrées et sorties connectées de la façon suivante :
 * **clk**           : BTN0
 * **rst**           : SW7
 * **en**            : SW1
