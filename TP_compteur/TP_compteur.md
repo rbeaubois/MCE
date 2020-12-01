@@ -1,10 +1,18 @@
 # TP compteur
 
 Dans ce TP, nous allons réaliser un compteur synchrone sur 4 bits avec reset asynchrone et signal d'activation. 
+Le dossier contient les fichiers suivants :
+* **compteur_4b.vhd** : le fichier vhdl à compléter
+* **compteur_4b.do** : le script de simulation à compléter
+* **test_carte.vhd** : le fichier vhdl pour l'implémentation sur carte
+* **trans7seg.vhd** : le fichier vhdl du transcodeur 7 segments utilisé par le fichier de test sur la carte
+* **Tp_compteur.md** : sujet du TP
+* **images/** : répertoire avec les images sujet
+
 
 # Description VHDL
 
-Le schéma en bloc du module est le suivant :
+Décrire le module VHDL du compteur à partir du schéma bloc du module qui est le suivant à partir du fichier **compteur_4b.vhd**:
 
 ![compteur_4b](https://github.com/rbeaubois/MCE/blob/master/TP_compteur/images/compteur_4b.PNG)
 
@@ -20,7 +28,6 @@ Le schéma en bloc du module est le suivant :
     - si 0 : le compteur va de 15 à 0
 * **s** : sortie du compteur
 
-- [ ] Le nom du module et du fichier est : **compteur_4b**
 - [ ] Le code est indenté
 - [ ] Le module compile sans erreurs
 
@@ -40,8 +47,7 @@ Le schéma en bloc du module est le suivant :
 
 # Simulation
 
-Créer un script.do qui simule tous les cas possibles et vérifier la sortie.
-
+Compléter le script **compteur_4b.do** pour simuler tous les cas possibles et vérifier la sortie.
 
 - [ ] Le compteur ne fonctionne que si le signal d'activation (enable) est à l'état haut
 - [ ] Le compteur s'incrémente/décrémente uniquement aux front montants de l'horloge
@@ -52,7 +58,7 @@ Créer un script.do qui simule tous les cas possibles et vérifier la sortie.
 
 # Implémentation
 
-Le fichier **test_carte.vhd** utilise le compteur que vous venez de décrire pour générer la commande du transcodeur 7 segments que vous avez décrit la semaine précédente. Ainsi, la sortie de votre compteur allant de 0 à 15 sera affichée sur les afficheurs de votre carte.
+Le fichier **test_carte.vhd** utilise le compteur que vous venez de décrire pour générer la commande du transcodeur 7 segments que vous avez décrit la semaine précédente. Ainsi, la sortie de votre compteur variant entre 0 et 15 sera affichée sur les afficheurs de votre carte. L'horloge sera simuler par l'appui sur un bouton qui va générer un front montant à l'appui. 
 
 ![test_carte](https://github.com/rbeaubois/MCE/blob/master/TP_compteur/images/test_carte.PNG)
 
