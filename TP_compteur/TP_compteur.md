@@ -1,6 +1,6 @@
 # TP compteur
 
-Dans ce TP, nous allons réaliser un **compteur/décompteur synchrone** sur 4 bits (modulo 16 car 2^4=16) avec **reset asynchrone** et signal d'activation. Bien que le compteur désigne un élément qui s'incrémente et le décompteur un élément qui se décrémente, pour simplifier l'énoncé de ce TP on appellera compteur le module compteur/décompteur.
+Dans ce TP, nous allons réaliser un **compteur/décompteur synchrone** sur 4 bits (modulo 16 car 2^4=16) avec **reset asynchrone** et signal d'activation. Bien que le compteur désigne un élément qui s'incrémente et le décompteur un élément qui se décrémente, pour simplifier l'énoncé de ce TP on appellera compteur le module qui assure à la fois la fonction de compteur et de décompteur.
 
 Le dossier contient les fichiers suivants :
 * **compteur_4b.vhd** : le fichier vhdl à compléter
