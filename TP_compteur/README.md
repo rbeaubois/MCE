@@ -7,7 +7,7 @@ Le dossier contient les fichiers suivants :
 * **compteur_4b.do** : le script de simulation à compléter
 * **test_carte.vhd** : le fichier vhdl pour l'implémentation sur carte
 * **trans7seg.vhd** : le fichier vhdl du transcodeur 7 segments utilisé par le fichier de test sur la carte
-* **Tp_compteur.md** : sujet du TP
+* **README.md** : sujet du TP
 * **images/** : répertoire avec les images sujet
 
 
