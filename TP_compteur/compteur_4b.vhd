@@ -4,20 +4,22 @@
 
 library ieee;
 use ieee.std_logic_1164.all;
-use ieee.std_numeric_std.all;   -- Used for unsigned type
+use ieee.numeric_std.all;       -- Used for unsigned
 
 entity compteur_4b is
     Port ( 
-        -- Inputs
+        -- Entrees
         -- ...
-        -- Outputs
+        -- Sorties
         -- ...
     );
 end entity;
 
 architecture rtl of compteur_4b is
-    -- Signaux intermédiaires
-    -- ...
+    -- Signaux intermediaires
+    signal compteur : unsigned(3 downto 0) := to_unsigned(0,4); -- Signal intermediaire
+    -- "to_unsigned(valeur, nombre de bits)" sert a affecter une valeur a un signal de type unsigned
+    -- il faut également l'utiliser comme syntaxe pour les comparaisons (condition if, elsif, ...)
 begin
 
     -- Fonctionnement du compteur synchrone

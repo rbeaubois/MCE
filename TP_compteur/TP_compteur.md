@@ -33,7 +33,7 @@ Décrire le module VHDL du compteur en complétant le fichier **compteur_4b.vhd*
 - [ ] Le module compile sans erreurs
 
 > Aide & rappel :
-> * utiliser le type de signal **unsigned** pour les additions/soustractions
+> * utiliser le type de signal **unsigned** pour les additions/soustractions avec la bonne syntaxe d'assignation
 > * bien indenter son code (tabulation avec la touche __tab__):
 >   <pre><code>process(...)
 >	begin
@@ -56,6 +56,9 @@ Compléter le script **compteur_4b.do** pour simuler tous les cas possibles et v
 - [ ] Le compteur s'incrémente si inc est à '1'
 - [ ] Le compteur se décrémente si inc est à '0'
 - [ ] La sortie varie toujours entre 0 et 15
+
+> Aide & rappel :
+> * Pour verifier la sortie du compteur facilement vous pouvez changer la base sur le simulateur avec un clic-droit sur ce dernier puis Radix>Binary ou Radix>Unsigned
 
 # Implémentation
 
