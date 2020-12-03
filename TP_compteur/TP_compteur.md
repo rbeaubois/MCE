@@ -81,4 +81,6 @@ A l'aide de Quartus synthésiser et implémenter le module **test_carte.vhd** av
 
 **Si vous deviez maintenant changer ce compteur par un compteur synchrone avec reset synchrone quels changements proposeriez-vous ? Ces changements ont-ils un impact sur le fonctionnement du process ?**
 
+**Donnez 2 applications possibles de ce type de module**
+
 
