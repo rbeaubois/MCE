@@ -79,8 +79,8 @@ A l'aide de Quartus synthésiser et implémenter le module **test_carte.vhd** av
 - [ ] L'appui sur un bouton change l'état du compteur si le reset est à 0 et l'activation (enable) est à 1
 - [ ] Le module est conforme au cahier des charges
 
-**Si vous deviez maintenant changer ce compteur par un compteur synchrone avec reset synchrone quels changements proposeriez-vous ? Ces changements ont-ils un impact sur le fonctionnement du process ?**
+* **Si vous deviez maintenant changer ce compteur par un compteur synchrone avec reset synchrone quels changements proposeriez-vous ? Ces changements ont-ils un impact sur le fonctionnement du process ?**
 
-**Donnez 2 applications possibles de ce type de module**
+* **Donnez 2 applications possibles de ce type de module**
 
 
