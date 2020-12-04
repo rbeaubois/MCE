@@ -13,7 +13,7 @@ Le dossier contient les fichiers suivants :
 
 # Description VHDL
 
-Décrire le module VHDL du compteur en complétant le fichier **compteur_4b.vhd** à partir du schéma bloc du module :
+**Q1/** Décrire le module VHDL du compteur en complétant le fichier **compteur_4b.vhd** à partir du schéma bloc du module :
 
 ![compteur_4b](https://github.com/rbeaubois/MCE/blob/master/TP_compteur/images/compteur_4b.PNG)
 
@@ -48,7 +48,7 @@ Décrire le module VHDL du compteur en complétant le fichier **compteur_4b.vhd*
 
 # Simulation
 
-Compléter le script **compteur_4b.do** pour simuler tous les cas possibles et vérifier la sortie.
+**Q2/** Compléter le script **compteur_4b.do** pour simuler tous les cas possibles et vérifier la sortie.
 
 - [ ] Le compteur ne fonctionne que si le signal d'activation (enable) est à l'état haut
 - [ ] Le compteur s'incrémente/décrémente uniquement aux front montants de l'horloge
@@ -66,7 +66,7 @@ Le fichier **test_carte.vhd** utilise le compteur que vous venez de décrire pou
 
 ![test_carte](https://github.com/rbeaubois/MCE/blob/master/TP_compteur/images/test_carte.PNG)
 
-A l'aide de Quartus synthésiser et implémenter le module **test_carte.vhd** avec les entrées et sorties connectées de la façon suivante :
+**Q3/** A l'aide de Quartus synthésiser et implémenter le module **test_carte.vhd** avec les entrées et sorties connectées de la façon suivante :
 * **clk**           : BTN0
 * **rst**           : SW7
 * **en**            : SW1
@@ -82,7 +82,7 @@ A l'aide de Quartus synthésiser et implémenter le module **test_carte.vhd** av
 - [ ] L'appui sur un bouton change l'état du compteur si le reset est à 0 et l'activation (enable) est à 1
 - [ ] Le module est conforme au cahier des charges
 
-# Questions
+# Questions bonus
 
 * **Si vous deviez maintenant changer ce compteur par un compteur synchrone avec reset synchrone quels changements proposeriez-vous ? Ces changements ont-ils un impact sur le fonctionnement du process ?**
 
