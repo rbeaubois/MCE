@@ -51,7 +51,7 @@ Un point de départ peut être la création de deux tableaux : un tableau avec l
 
 # Etape 2 : Chenillard au tempo de la musique
 
-Fort de votre expertise en chenillard cette étape devrait être assez simple. Elle consiste à faire avancer le chenillard au tempo de la musique que l'on note souvent BPM pour Beats Per Minute (les adeptes de trans ou autre dingueries savent de quoi il en retourne).
+Fort de votre expertise en chenillard cette étape devrait être assez simple. Elle consiste à faire avancer le chenillard au tempo de la musique que l'on note souvent BPM pour Beats Per Minute (les adeptes de trans ou autres dingueries savent de quoi il en retourne).
 
 Prenons par exemple `Fuzz Universe` de Paul Gilbert dont le BPM moyen est de 129, le chenillard avancerait donc toutes les 1*60/129 secondes.
 
