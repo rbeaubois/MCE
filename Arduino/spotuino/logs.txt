@@ -8,5 +8,5 @@
 * Comments :
 *****************************************************************************/
 
-- Ajout de la fonction ModifieMonVéhicule pour savoir si oui ou non on veut on modifie son véhicule
+- Ajout de la fonction ModifieMonVéhicule pour savoir si oui ou non on modifie son véhicule
 
