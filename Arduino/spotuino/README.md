@@ -23,9 +23,11 @@ Je vous conseille fortement d'organiser votre projet en fichiers pour que votre 
 * `pitches.h` : bibliothèque qui contient les fréquences des notes
 
 Maintenant que vous savez tout, y a plus qu'à !
+<p align="center">
 
-<center><img src="https://media.giphy.com/media/zvy1r6BEdGKtT7m5m6/giphy.gif"></center>
+  <img src="https://media.giphy.com/media/zvy1r6BEdGKtT7m5m6/giphy.gif#center">
 
+</p>
 
 # Etape 1 : Jouer une musique sur le buzzer
 
