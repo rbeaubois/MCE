@@ -101,7 +101,7 @@ Puisque toute bonne chose a une fin, il va falloir un moyen pratique d'arrêter 
 
 Il existe une triste vérité derrière les boutons poussoirs qui est la présence d'un [effet de rebond](http://pila.fr/wordpress/?p=77) qu'internet saura bien vous expliquer et imager. Pour pallier ce problème il faudra réaliser un filtre anti-rebond en logiciel qui peut simplement se constituer d'un temps minimum entre chaque lecture du bouton poussoir de façon à attendre la fin des rebonds. Vous l'avez sûrement senti venir, ce sera encore un bloc if/millis() :)
 
-Une bonne chose à faire serait également de faire qu'un appui sur le bouton arrête la musique et qu'un autre appui la remet. Ce comportement peut se faire avec une variable qui retient l'état du bouton.
+Une bonne chose à faire serait également de faire qu'un appui sur le bouton arrête la musique et qu'un autre appui la remette. Ce comportement peut se faire avec une variable qui retient l'état du bouton.
 
 > **Aide**
 > * Le type de variable booléen
