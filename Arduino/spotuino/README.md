@@ -63,7 +63,7 @@ Prenons par exemple `Fuzz Universe` de Paul Gilbert dont le BPM moyen est de 129
 
 # Etape 3 : Remplacer les appels bloquants (delay())
 
-La fonction `delay()` bien que très pratique au premier abord est en fait assez contraignante puisqu'elle génère un appel bloquant. En d'autres termes, l'appel à cette fonction bloque votre Arduino à cette instruction nous empêchant alors de faire autre chose. Utiliser cette fonction revient alors à s'imposer la loi de boire ou conduire, sauf qu'en grand inconscients que nous sommes on va faire les deux en même temps grâce à la fonction `millis()`.
+La fonction `delay()` bien que très pratique au premier abord est en fait assez contraignante puisqu'elle génère un appel bloquant. En d'autres termes, l'appel à cette fonction bloque votre Arduino à cette instruction nous empêchant alors de faire autre chose. Utiliser cette fonction revient alors à s'imposer la loi de boire ou conduire, sauf qu'en grands inconscients que nous sommes on va faire les deux en même temps grâce à la fonction `millis()`.
 
 La fonction millis() renvoie le temps écoulé depuis l'exécution de votre programme. Si on stocke cette valeur dans une variable on pourra alors compter le temps écoulé entre deux appels de la fonction millis(). Enfin, avec quelques blocs if/else on peut donc créer une temporisation non bloquante.
 
