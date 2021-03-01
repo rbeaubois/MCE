@@ -11,7 +11,7 @@
 // Il veut modifier son véhicule ? Renvoie vrai ou faux
 bool ModifieMonVehicule(char yesorno)
 {
-    if (yesorno = 'y')
+    if (yesorno == 'y')
     {
         return true;
     }
