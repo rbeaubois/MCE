@@ -1,0 +1,12 @@
+/***************************************************************************
+* Author   : 
+* Created  : 
+* Edited   : 
+*
+* >>> logs.txt : notes pour le projet spotuino
+*
+* Comments :
+*****************************************************************************/
+
+- Ajout de la fonction ModifieMonVéhicule pour savoir si oui ou non on veut on modifie son véhicule
+
