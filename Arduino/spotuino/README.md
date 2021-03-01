@@ -42,7 +42,7 @@ Un point de départ peut être la création de deux tableaux : un tableau avec l
 > ```
 > * Arrêter la génération d'un signal carrée sur une pin
 >```C++
-> noTone(pin); // ne fonctionnera pas sur le buzzer :)
+> noTone(pin); // ne fonctionnera pas sur le buzzer, il faudra faire votre propre fonction :)
 > ```
 > * Créer une attente d'une durée donnée
 > ```C++
