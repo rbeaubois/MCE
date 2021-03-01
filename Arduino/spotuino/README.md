@@ -10,9 +10,9 @@ Les fonctionnalités à implémenter sont pour l'instant :
 * Nom de la musique jouée et avancement affichés sur le port série
 * Tempo affiché sur l'afficheur sept segments
 
-Le projet est découpé en plusieurs étapes pour vous faciliter le développement du projet.
+Le projet est découpé en plusieurs étapes pour vous faciliter le développement.
 
-Je vous conseille fortement d'organiser votre projet en fichiers pour que votre projet reste clair et compréhensible. Un exemple d'organisation est le suivant
+Je vous conseille fortement d'organiser votre projet en fichiers pour que votre projet reste clair et compréhensible. Je vous donne un exemple d'organisation et le squelette des fichiers qui vont avec
 
 **Spotuino** :
 * `logs.txt` ou `.md` : pour mettre vos notes (avancements, idées, problèmes)
@@ -21,6 +21,11 @@ Je vous conseille fortement d'organiser votre projet en fichiers pour que votre 
 * `spotuino.cpp` : définitions des fonctions utilisées
 * `vma209.h` : #define utiles propres au shield vma209
 * `pitches.h` : bibliothèque qui contient les fréquences des notes
+
+Maintenant que vous savez tout, y a plus qu'à !
+
+<center><img src="https://media.giphy.com/media/zvy1r6BEdGKtT7m5m6/giphy.gif"></center>
+
 
 # Etape 1 : Jouer une musique sur le buzzer
 
@@ -107,7 +112,11 @@ Une bonne chose à faire serait également de faire qu'un appui sur le bouton ar
 > ar = !ar;
 >```
 
-# Etape 6 : Nom de la musique affiché sur le port série
+# Etape 6 : Activation ou non de la vitesse variable
+
+Tant que l'on est avec les boutons autant ajouter un autre bouton pour sélectionner ou non le tempo variable de la musique. On va dire qu'un appui permet de changer la vitesse avec le potentiomètre et qu'un rappui la désactive, c'est simple, basique !
+
+# Etape 7 : Nom de la musique affiché sur le port série
 
 Une étape facile pour booster le moral avant le gros morceau que va être l'afficheur 7 segments. Pour cette étape on va utiliser le port série pour afficher la musique jouée ainsi que son avancement (en secondes ou avancement de l'indice du tableau).
 
@@ -128,8 +137,8 @@ Pour ne pas saturer le moniteur il serait intéressant de trouver une solution q
 > '\n' : va à la ligne suivante
 >```
 
-# Etape 7 : Afficher le tempo sur l'afficheur 7 segments
+# Etape 8 : Afficher le tempo sur l'afficheur 7 segments
 
-Fécilitations aux grands baroudeurs et baroudeuses qui ont survécus jusqu'ici. Au programme du plaisir jusqu'à plus soif avec l'afficheur 7 segments. 
+Fécilitations aux grands baroudeurs et baroudeuses qui ont survécus jusqu'ici. Au programme du plaisir jusqu'à plus soif avec l'afficheur 7 segments.
 
 À suivre ...
