@@ -3,6 +3,7 @@
 
 # Contenu
 * **tpX** : exemples de codes pour les exercices de TP
+* **spotuino** : projet optionnel sur temps libre 
 * **ressources** : documentation et codes exemples utiles pour les TP
 
 > Dans les exemples de codes pour les **tpX** vous trouverez plusieurs versions toutes fonctionnelles mais écritent différemment.
@@ -20,3 +21,4 @@
 
 * [Platform IO](https://platformio.org/platformio-ide) : IDE complet, multiplateforme et open source qui permet de programmer/debugger de nombreuses de cibles (dont l'Arduino Uno) et avec différents [frameworks](https://docs.platformio.org/en/latest/frameworks/) . Intégration possible avec la plupart des éditeurs (VSCode, Atom, CLion, Sublime Text, CodeBlocks, ...)
 * [Ressources Shield VMA2019](https://www.velleman.eu/support/downloads/?code=VMA209)
+* [Arduino references](https://www.arduino.cc/search) : onglet de recherche sur le site arduino pour avoir des informations sur les fonctions ou autre. Essayez par exemple avec la fonction digitalWrite().
