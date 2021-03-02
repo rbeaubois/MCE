@@ -88,11 +88,11 @@ Rien de bien nouveau pour vous, il suffit de modifier la valeur de votre variabl
 > **Aide**
 > * Lire une valeur analogique depuis une broche ADC
 > ```C++
-> analogRead(pin);
+> int val = analogRead(pin);
 >```
 > * Modifier la plage de valeur d'une variable
 > ```C
-> map(value, fromLow, fromHigh, toLow, toHigh);
+> int new_val = map(value, fromLow, fromHigh, toLow, toHigh); // Le type de retour va dépendre des valeurs que vous mappez
 >```
 
 # Etape 5 : Arrêt de la musique commandé par bouton
