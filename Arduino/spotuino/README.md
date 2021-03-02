@@ -36,15 +36,15 @@ Le toute première étape est la programmation de la musique sur le buzzer. Il e
 Un point de départ peut être la création de deux tableaux : un tableau avec les notes de musiques et un tableau de rhythme (durée des notes). La musique se fera donc calculant pour chaque indice du tableau quelle note jouée et pendant combien de temps en fonction du tempo.
 
 > **Aide**
-> * Générer un signal carré sur une pin
+> * Générer un signal carré sur une pin : [tone()](https://www.arduino.cc/reference/en/language/functions/advanced-io/tone/)
 >```C++
 > tone(pin, frequency, duration);
 > ```
-> * Arrêter la génération d'un signal carrée sur une pin
+> * Arrêter la génération d'un signal carrée sur une pin : [noTone()](https://www.arduino.cc/reference/en/language/functions/advanced-io/notone/)
 >```C++
 > noTone(pin); // ne fonctionnera pas sur le buzzer, il faudra faire votre propre fonction :)
 > ```
-> * Créer une attente d'une durée donnée
+> * Créer une attente d'une durée donnée : [delay()](https://www.arduino.cc/reference/en/language/functions/time/delay/)
 > ```C++
 > delay(ms);
 >```
@@ -56,7 +56,7 @@ Fort de votre expertise en chenillard cette étape devrait être assez simple. E
 Prenons par exemple `Fuzz Universe` de Paul Gilbert dont le BPM moyen est de 129, le chenillard avancerait donc toutes les 1*60/129 secondes.
 
 > **Aide**
-> * Créer une attente d'une durée donnée
+> * Créer une attente d'une durée donnée : [delay()](https://www.arduino.cc/reference/en/language/functions/time/delay/)
 > ```C++
 > delay(ms);
 >```
@@ -70,11 +70,11 @@ La fonction millis() renvoie le temps écoulé depuis l'exécution de votre prog
 Maintenant il ne vous reste plus qu'à appliquer cette modification partout !
 
 > **Aide**
-> * Récupérer le temps écoulé depuis l'exécution du programme en ms
+> * Récupérer le temps écoulé depuis l'exécution du programme en ms : [millis()](https://www.arduino.cc/reference/en/language/functions/time/millis/)
 > ```C++
 > unsigned long time = millis();
 >```
-> * Récupérer le temps écoulé depuis l'exécution du programme en µs
+> * Récupérer le temps écoulé depuis l'exécution du programme en µs : [micros()](https://www.arduino.cc/reference/en/language/functions/time/micros/)
 > ```C++
 > unsigned long time = micros();
 >```
@@ -86,11 +86,11 @@ Pour préparer votre session DJ à Ibiza il va vous falloir de quoi faire grimpe
 Rien de bien nouveau pour vous, il suffit de modifier la valeur de votre variable de tempo en se basant sur la lecture du potentiomètre. Le petit bonus serait de limiter la vitesse de rafraichissement de la valeur du potentiomètre avec un bloc if/millis() vu que la valeur de ce dernier fluctue beaucoup.
 
 > **Aide**
-> * Lire une valeur analogique depuis une broche ADC
+> * Lire une valeur analogique depuis une broche ADC : [analogRead()](https://www.arduino.cc/reference/en/language/functions/analog-io/analogread/)
 > ```C++
 > int val = analogRead(pin);
 >```
-> * Modifier la plage de valeur d'une variable
+> * Modifier la plage de valeur d'une variable : [map()](https://www.arduino.cc/reference/en/language/functions/math/map/)
 > ```C
 > int new_val = map(value, fromLow, fromHigh, toLow, toHigh); // Le type de retour va dépendre des valeurs que vous mappez
 >```
@@ -104,7 +104,7 @@ Il existe une triste vérité derrière les boutons poussoirs qui est la présen
 Une bonne chose à faire serait également de faire qu'un appui sur le bouton arrête la musique et qu'un autre appui la remette. Ce comportement peut se faire avec une variable qui retient l'état du bouton.
 
 > **Aide**
-> * Le type de variable booléen
+> * Le type de variable booléen : [bool](https://www.arduino.cc/reference/en/language/variables/data-types/bool/)
 > ```C++
 > bool ar = true;
 > bool on = false;
@@ -125,15 +125,15 @@ Une étape facile pour booster le moral avant le gros morceau que va être l'aff
 Pour ne pas saturer le moniteur il serait intéressant de trouver une solution qui n'utilise qu'une seule ligne du moniteur pendant toute la durée de la chanson.
 
 > **Aide**
-> * Initialiser une communication série (dans le setup)
+> * Initialiser une communication série (dans le setup) :  [Serial.begin()](https://www.arduino.cc/reference/en/language/functions/communication/serial/begin/)
 > ```C++
 > Serial.begin(baudrate);
 >```
-> * Envoyer sur le port série
+> * Envoyer sur le port série : [Serial.print()](https://www.arduino.cc/reference/en/language/functions/communication/serial/print/)
 > ```C
 > Serial.print(val);
 >```
-> * Les caractères ASCII spéciaux
+> * Les caractères [ASCII](https://fr.wikibooks.org/wiki/Les_ASCII_de_0_%C3%A0_127/La_table_ASCII) spéciaux
 > ```C
 > '\r' : retour au début de la ligne
 > '\n' : va à la ligne suivante
