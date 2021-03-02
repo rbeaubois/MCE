@@ -11,7 +11,7 @@
 > Ces versions ne sont pas forcément "mieux", elles sont là pour vous habituer à voir différentes façons de coder pas toujours très claires/explicites
 > (utilisation de l'opérateur ternaire volontairement abusive, simplification du code, ...).
 >
-> L'Arduino étant une plateforme avec une communauté importante, il existe beaucoup de projets existants que vous pouvez réutiliser. Vous serez alors très souvent amenés à fouiller dans des codes qui ne seront pas les votres et avec une façon de coder à laquelle vous ne serez pas toujours habitués. 
+> L'Arduino étant une plateforme avec une communauté importante, il existe beaucoup de projets que vous pouvez réutiliser. Vous serez alors très souvent amenés à fouiller dans des codes qui ne seront pas les votres et avec une façon de coder à laquelle vous ne serez pas toujours habitués. 
 > 
 >Cerise sur le gâteau, ce sera souvent en anglais ! C'est pourquoi je vous donne les codes
 > en anglais pour vous familiariser un peu avec le vocabulaire de programmation que vous n'avez pas forcément l'habitude d'utiliser.
