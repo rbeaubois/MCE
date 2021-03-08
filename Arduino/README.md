@@ -19,6 +19,6 @@
 
 # Quelques liens utiles
 
-* [Platform IO](https://platformio.org/platformio-ide) : IDE complet, multiplateforme et open source qui permet de programmer/debugger de nombreuses de cibles (dont l'Arduino Uno) et avec différents [frameworks](https://docs.platformio.org/en/latest/frameworks/) . Intégration possible avec la plupart des éditeurs (VSCode, Atom, CLion, Sublime Text, CodeBlocks, ...)
-* [Ressources Shield VMA2019](https://www.velleman.eu/support/downloads/?code=VMA209)
-* [Arduino reference](https://www.arduino.cc/search) : onglet de recherche sur le site arduino pour avoir des informations sur les fonctions ou autre. Essayez par exemple avec la fonction digitalWrite().
+* [Platform IO](https://platformio.org/platformio-ide){:target="_blank"} : IDE complet, multiplateforme et open source qui permet de programmer/debugger de nombreuses de cibles (dont l'Arduino Uno) et avec différents [frameworks](https://docs.platformio.org/en/latest/frameworks/) . Intégration possible avec la plupart des éditeurs (VSCode, Atom, CLion, Sublime Text, CodeBlocks, ...)
+* [Ressources Shield VMA2019](https://www.velleman.eu/support/downloads/?code=VMA209){:target="_blank"}
+* [Arduino reference](https://www.arduino.cc/search){:target="_blank"} : onglet de recherche sur le site arduino pour avoir des informations sur les fonctions ou autre. Essayez par exemple avec la fonction digitalWrite().
