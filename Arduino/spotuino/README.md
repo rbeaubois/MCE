@@ -36,48 +36,73 @@ Le toute première étape est la programmation de la musique sur le buzzer. Il e
 Un point de départ peut être la création de deux tableaux : un tableau avec les notes de musiques et un tableau de rhythme (durée des notes). La musique se fera donc calculant pour chaque indice du tableau quelle note jouée et pendant combien de temps en fonction du tempo.
 
 > **Aide**
-> * Générer un signal carré sur une pin : [tone()](https://www.arduino.cc/reference/en/language/functions/advanced-io/tone/)
+> * Générer un signal carré sur une pin
 >```C++
 > tone(pin, frequency, duration);
 > ```
-> * Arrêter la génération d'un signal carrée sur une pin : [noTone()](https://www.arduino.cc/reference/en/language/functions/advanced-io/notone/)
+> * Arrêter la génération d'un signal carrée sur une pin
 >```C++
-> noTone(pin); // ne fonctionnera pas sur le buzzer, il faudra faire votre propre fonction :)
+> noTone(pin); // ne fonctionnera pas sur le buzzer :)
 > ```
-> * Créer une attente d'une durée donnée : [delay()](https://www.arduino.cc/reference/en/language/functions/time/delay/)
+> * Créer une attente d'une durée donnée
 > ```C++
 > delay(ms);
 >```
 
 # Etape 2 : Chenillard au tempo de la musique
 
-Fort de votre expertise en chenillard cette étape devrait être assez simple. Elle consiste à faire avancer le chenillard au tempo de la musique que l'on note souvent BPM pour Beats Per Minute (les adeptes de trans ou autres dingueries savent de quoi il en retourne).
+Fort de votre expertise en chenillard cette étape devrait être assez simple. Elle consiste à faire avancer le chenillard au tempo de la musique que l'on note souvent BPM pour Beats Per Minute (les adeptes de trans ou autre dingueries savent de quoi il en retourne).
 
-Prenons par exemple `Fuzz Universe` de Paul Gilbert dont le BPM moyen est de 129, le chenillard avancerait donc toutes les 1*60/129 secondes.
+Prenons par exemple `Fuzz Universe` de Paul Gilbert dont le BPM moyen est de 129, le chenillard avancerait donc toutes les 1/129 secondes.
 
 > **Aide**
-> * Créer une attente d'une durée donnée : [delay()](https://www.arduino.cc/reference/en/language/functions/time/delay/)
+> * Créer une attente d'une durée donnée
 > ```C++
 > delay(ms);
 >```
 
 # Etape 3 : Remplacer les appels bloquants (delay())
 
-La fonction `delay()` bien que très pratique au premier abord est en fait assez contraignante puisqu'elle génère un appel bloquant. En d'autres termes, l'appel à cette fonction bloque votre Arduino à cette instruction nous empêchant alors de faire autre chose. Utiliser cette fonction revient alors à s'imposer la loi de boire ou conduire, sauf qu'en grands inconscients que nous sommes on va faire les deux en même temps grâce à la fonction `millis()`.
+La fonction `delay()` bien que très pratique au premier abord est en fait assez contraignante puisqu'elle génère un appel bloquant. En d'autres termes, l'appel à cette fonction bloque votre Arduino à cette instruction nous empêchant alors de faire autre chose. Utiliser cette fonction revient alors à s'imposer la loi de boire ou conduire, sauf qu'en grand inconscients que nous sommes on va faire les deux en même temps grâce à la fonction `millis()`.
 
 La fonction millis() renvoie le temps écoulé depuis l'exécution de votre programme. Si on stocke cette valeur dans une variable on pourra alors compter le temps écoulé entre deux appels de la fonction millis(). Enfin, avec quelques blocs if/else on peut donc créer une temporisation non bloquante.
 
 Maintenant il ne vous reste plus qu'à appliquer cette modification partout !
 
 > **Aide**
-> * Récupérer le temps écoulé depuis l'exécution du programme en ms : [millis()](https://www.arduino.cc/reference/en/language/functions/time/millis/)
+> * Récupérer le temps écoulé depuis l'exécution du programme en ms
 > ```C++
 > unsigned long time = millis();
 >```
-> * Récupérer le temps écoulé depuis l'exécution du programme en µs : [micros()](https://www.arduino.cc/reference/en/language/functions/time/micros/)
+> * Récupérer le temps écoulé depuis l'exécution du programme en µs
 > ```C++
 > unsigned long time = micros();
 >```
+> * Spécificateur utile pour les variables des fonctions
+> ```C++
+> static
+>```
+> * Un exemple d'utilisation
+> ```C++
+> unsigned long it_time, t_last_action1, t_last_action2;  // Compteurs de temps
+> unsigned long t_action1 = 100;  // Période d'exécution de l'action 1  
+> unsigned long t_action2 = 500;  // Période d'exécution de l'action 2
+> 
+> void loop(){
+>   it_time = millis(); // Temps écoulé jusqu'à cette itération
+>   
+>   if((it_time-t_last_action1) > t_action1){
+>     t_last_action1 = it_time; // Rafraichissement du compteur
+>     action1() // Exécution de l'action 1
+>   }
+> 
+>   if((it_time-t_last_action2) > t_action2){
+>     t_last_action2 = it_time; // Rafraichissement du compteur
+>     action2() // Exécution de l'action 1
+>   }
+> }
+> // Trouverez-vous la limitation de cette façon de faire et comment y remédier ? :)
+> ```
 
 # Etape 4 : Tempo commandé par potentiomètre
 
@@ -86,13 +111,13 @@ Pour préparer votre session DJ à Ibiza il va vous falloir de quoi faire grimpe
 Rien de bien nouveau pour vous, il suffit de modifier la valeur de votre variable de tempo en se basant sur la lecture du potentiomètre. Le petit bonus serait de limiter la vitesse de rafraichissement de la valeur du potentiomètre avec un bloc if/millis() vu que la valeur de ce dernier fluctue beaucoup.
 
 > **Aide**
-> * Lire une valeur analogique depuis une broche ADC : [analogRead()](https://www.arduino.cc/reference/en/language/functions/analog-io/analogread/)
+> * Lire une valeur analogique depuis une broche ADC
 > ```C++
-> int val = analogRead(pin);
+> analogRead(pin);
 >```
-> * Modifier la plage de valeur d'une variable : [map()](https://www.arduino.cc/reference/en/language/functions/math/map/)
+> * Modifier la plage de valeur d'une variable
 > ```C
-> int new_val = map(value, fromLow, fromHigh, toLow, toHigh); // Le type de retour va dépendre des valeurs que vous mappez
+> map(value, fromLow, fromHigh, toLow, toHigh);
 >```
 
 # Etape 5 : Arrêt de la musique commandé par bouton
@@ -101,10 +126,10 @@ Puisque toute bonne chose a une fin, il va falloir un moyen pratique d'arrêter 
 
 Il existe une triste vérité derrière les boutons poussoirs qui est la présence d'un [effet de rebond](http://pila.fr/wordpress/?p=77) qu'internet saura bien vous expliquer et imager. Pour pallier ce problème il faudra réaliser un filtre anti-rebond en logiciel qui peut simplement se constituer d'un temps minimum entre chaque lecture du bouton poussoir de façon à attendre la fin des rebonds. Vous l'avez sûrement senti venir, ce sera encore un bloc if/millis() :)
 
-Une bonne chose à faire serait également de faire qu'un appui sur le bouton arrête la musique et qu'un autre appui la remette. Ce comportement peut se faire avec une variable qui retient l'état du bouton.
+Une bonne chose à faire serait également de faire qu'un appui sur le bouton arrête la musique et qu'un autre appui la remet. Ce comportement peut se faire avec une variable qui retient l'état du bouton.
 
 > **Aide**
-> * Le type de variable booléen : [bool](https://www.arduino.cc/reference/en/language/variables/data-types/bool/)
+> * Le type de variable booléen
 > ```C++
 > bool ar = true;
 > bool on = false;
@@ -125,15 +150,15 @@ Une étape facile pour booster le moral avant le gros morceau que va être l'aff
 Pour ne pas saturer le moniteur il serait intéressant de trouver une solution qui n'utilise qu'une seule ligne du moniteur pendant toute la durée de la chanson.
 
 > **Aide**
-> * Initialiser une communication série (dans le setup) :  [Serial.begin()](https://www.arduino.cc/reference/en/language/functions/communication/serial/begin/)
+> * Initialiser une communication série (dans le setup)
 > ```C++
 > Serial.begin(baudrate);
 >```
-> * Envoyer sur le port série : [Serial.print()](https://www.arduino.cc/reference/en/language/functions/communication/serial/print/)
+> * Envoyer sur le port série
 > ```C
 > Serial.print(val);
 >```
-> * Les caractères [ASCII](https://fr.wikibooks.org/wiki/Les_ASCII_de_0_%C3%A0_127/La_table_ASCII) spéciaux
+> * Les caractères ASCII spéciaux
 > ```C
 > '\r' : retour au début de la ligne
 > '\n' : va à la ligne suivante
