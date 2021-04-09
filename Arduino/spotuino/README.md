@@ -98,7 +98,7 @@ Maintenant il ne vous reste plus qu'à appliquer cette modification partout !
 > 
 >   if((it_time-t_last_action2) > t_action2){
 >     t_last_action2 = it_time; // Rafraichissement du compteur
->     action2() // Exécution de l'action 1
+>     action2() // Exécution de l'action 2
 >   }
 > }
 > // Trouverez-vous la limitation de cette façon de faire et comment y remédier ? :)
