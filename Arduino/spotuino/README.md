@@ -53,7 +53,7 @@ Un point de départ peut être la création de deux tableaux : un tableau avec l
 
 Fort de votre expertise en chenillard cette étape devrait être assez simple. Elle consiste à faire avancer le chenillard au tempo de la musique que l'on note souvent BPM pour Beats Per Minute (les adeptes de trans ou autre dingueries savent de quoi il en retourne).
 
-Prenons par exemple `Fuzz Universe` de Paul Gilbert dont le BPM moyen est de 129, le chenillard avancerait donc toutes les 1/129 secondes.
+Prenons par exemple `Fuzz Universe` de Paul Gilbert dont le BPM moyen est de 129, le chenillard avancerait donc toutes les 1/129 minute.
 
 > **Aide**
 > * Créer une attente d'une durée donnée : [delay()](https://www.arduino.cc/reference/en/language/functions/time/delay/)
