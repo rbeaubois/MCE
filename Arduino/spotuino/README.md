@@ -193,7 +193,7 @@ Sur votre shield il y a deux registres à décalage 8 bits (cf [schematic](https
 
 # Etape 9 : [Relax](https://www.youtube.com/watch?v=Yem_iEHiyJ0)
 
-Pour l'instant le projet s'arrête là mais n'importe qu'elle amélioration est la bienvenue !
+Pour l'instant le projet s'arrête là mais n'importe quelle amélioration est la bienvenue !
 
 Et si vous êtes arrivés là juste en scrollant et en vous disant que c'est trop dur, que vous n'y arriverez jamais, eh bien il n'y a qu'en essayant et persévérant qu'on peut réussir !
 
