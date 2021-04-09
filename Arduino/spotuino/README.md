@@ -36,15 +36,15 @@ Le toute première étape est la programmation de la musique sur le buzzer. Il e
 Un point de départ peut être la création de deux tableaux : un tableau avec les notes de musiques et un tableau de rhythme (durée des notes). La musique se fera donc calculant pour chaque indice du tableau quelle note jouée et pendant combien de temps en fonction du tempo.
 
 > **Aide**
-> * Générer un signal carré sur une pin
+> * Générer un signal carré sur une pin : [tone()](https://www.arduino.cc/reference/en/language/functions/advanced-io/tone/)
 >```C++
 > tone(pin, frequency, duration);
 > ```
-> * Arrêter la génération d'un signal carrée sur une pin
+> * Arrêter la génération d'un signal carrée sur une pin : [noTone()](https://www.arduino.cc/reference/en/language/functions/advanced-io/notone/)
 >```C++
-> noTone(pin); // ne fonctionnera pas sur le buzzer :)
+> noTone(pin); // ne fonctionnera pas sur le buzzer, il faudra faire votre propre fonction :)
 > ```
-> * Créer une attente d'une durée donnée
+> * Créer une attente d'une durée donnée : [delay()](https://www.arduino.cc/reference/en/language/functions/time/delay/)
 > ```C++
 > delay(ms);
 >```
@@ -56,7 +56,7 @@ Fort de votre expertise en chenillard cette étape devrait être assez simple. E
 Prenons par exemple `Fuzz Universe` de Paul Gilbert dont le BPM moyen est de 129, le chenillard avancerait donc toutes les 1/129 secondes.
 
 > **Aide**
-> * Créer une attente d'une durée donnée
+> * Créer une attente d'une durée donnée : [delay()](https://www.arduino.cc/reference/en/language/functions/time/delay/)
 > ```C++
 > delay(ms);
 >```
@@ -70,11 +70,11 @@ La fonction millis() renvoie le temps écoulé depuis l'exécution de votre prog
 Maintenant il ne vous reste plus qu'à appliquer cette modification partout !
 
 > **Aide**
-> * Récupérer le temps écoulé depuis l'exécution du programme en ms
+> * Récupérer le temps écoulé depuis l'exécution du programme en ms : [millis()](https://www.arduino.cc/reference/en/language/functions/time/millis/)
 > ```C++
 > unsigned long time = millis();
 >```
-> * Récupérer le temps écoulé depuis l'exécution du programme en µs
+> * Récupérer le temps écoulé depuis l'exécution du programme en µs : [micros()](https://www.arduino.cc/reference/en/language/functions/time/micros/)
 > ```C++
 > unsigned long time = micros();
 >```
@@ -98,7 +98,7 @@ Maintenant il ne vous reste plus qu'à appliquer cette modification partout !
 > 
 >   if((it_time-t_last_action2) > t_action2){
 >     t_last_action2 = it_time; // Rafraichissement du compteur
->     action2() // Exécution de l'action 2
+>     action2() // Exécution de l'action 1
 >   }
 > }
 > // Trouverez-vous la limitation de cette façon de faire et comment y remédier ? :)
@@ -111,13 +111,13 @@ Pour préparer votre session DJ à Ibiza il va vous falloir de quoi faire grimpe
 Rien de bien nouveau pour vous, il suffit de modifier la valeur de votre variable de tempo en se basant sur la lecture du potentiomètre. Le petit bonus serait de limiter la vitesse de rafraichissement de la valeur du potentiomètre avec un bloc if/millis() vu que la valeur de ce dernier fluctue beaucoup.
 
 > **Aide**
-> * Lire une valeur analogique depuis une broche ADC
+> * Lire une valeur analogique depuis une broche ADC : [analogRead()](https://www.arduino.cc/reference/en/language/functions/analog-io/analogread/)
 > ```C++
-> analogRead(pin);
+> int val = analogRead(pin);
 >```
-> * Modifier la plage de valeur d'une variable
+> * Modifier la plage de valeur d'une variable : [map()](https://www.arduino.cc/reference/en/language/functions/math/map/)
 > ```C
-> map(value, fromLow, fromHigh, toLow, toHigh);
+> int new_val = map(value, fromLow, fromHigh, toLow, toHigh); // Le type de retour va dépendre des valeurs que vous mappez
 >```
 
 # Etape 5 : Arrêt de la musique commandé par bouton
@@ -129,7 +129,7 @@ Il existe une triste vérité derrière les boutons poussoirs qui est la présen
 Une bonne chose à faire serait également de faire qu'un appui sur le bouton arrête la musique et qu'un autre appui la remet. Ce comportement peut se faire avec une variable qui retient l'état du bouton.
 
 > **Aide**
-> * Le type de variable booléen
+> * Le type de variable booléen : [bool](https://www.arduino.cc/reference/en/language/variables/data-types/bool/)
 > ```C++
 > bool ar = true;
 > bool on = false;
@@ -150,15 +150,15 @@ Une étape facile pour booster le moral avant le gros morceau que va être l'aff
 Pour ne pas saturer le moniteur il serait intéressant de trouver une solution qui n'utilise qu'une seule ligne du moniteur pendant toute la durée de la chanson.
 
 > **Aide**
-> * Initialiser une communication série (dans le setup)
+> * Initialiser une communication série (dans le setup) :  [Serial.begin()](https://www.arduino.cc/reference/en/language/functions/communication/serial/begin/)
 > ```C++
 > Serial.begin(baudrate);
 >```
-> * Envoyer sur le port série
+> * Envoyer sur le port série : [Serial.print()](https://www.arduino.cc/reference/en/language/functions/communication/serial/print/)
 > ```C
 > Serial.print(val);
 >```
-> * Les caractères ASCII spéciaux
+> * Les caractères [ASCII](https://fr.wikibooks.org/wiki/Les_ASCII_de_0_%C3%A0_127/La_table_ASCII) spéciaux
 > ```C
 > '\r' : retour au début de la ligne
 > '\n' : va à la ligne suivante
@@ -166,6 +166,39 @@ Pour ne pas saturer le moniteur il serait intéressant de trouver une solution q
 
 # Etape 8 : Afficher le tempo sur l'afficheur 7 segments
 
-Fécilitations aux grands baroudeurs et baroudeuses qui ont survécus jusqu'ici. Au programme du plaisir jusqu'à plus soif avec l'afficheur 7 segments.
+Tout d'abord fécilitations aux grands baroudeurs et baroudeuses qui ont survécus jusqu'ici. On va maintenant s'attaquer à l'afficheur 7 segments (avec beaucoup de lecture :) ) qui on va le voir sera un peu fastidieux à gérer qu'avec le FPGA. Pourquoi ? Parce que les architectures sont différentes et que l'Arduino ne permet pas faire de vrai parallélisme, il deveint donc moins évident de rafraichir les digits. Heuresement, grâce au timers vus en Etape 3 on pourra s'en sortir.
 
-À suivre ...
+Pour rappel, un afficheur 7 segments avec 4 digits nécessiterait 28 pins pour être contrôlé. Une solution pour pallier ce problème et celle qui est choisit sur le shield est l'utilisation est l'usage d'un registre à décalage. Les doux souvenirs de vos TP de VHDL devraient vous rappeler qu'un registre décalage permet simplement d'envoyer des bits un par un et de conserver les valeurs précédentes dans des registres. Au final, avec une pin on peut donc gérer plusieurs broches.
+
+Sur votre shield il y a deux registres à décalage 8 bits (cf [schematic](https://github.com/rbeaubois/MCE/blob/master/Arduino/ressources/shield_vma209/schematic_vma209.pdf)), un pour sélectionner le digit et un pour gérer les 7 segments d'un digit. En s'aidant des [exemples](https://github.com/rbeaubois/MCE/tree/master/Arduino/ressources/shield_vma209/exemples) et du schematic vous devriez pouvoir vous en sortir.
+
+> **Aide**
+> * Une syntaxe utile pour faire correspondre données et caractères à afficher : [switch](https://www.arduino.cc/reference/en/language/structure/control-structure/switchcase/)
+> ```C++
+> switch(data){
+>   case 0        : c = 0x00; break;
+>   ...
+>   case int('a') : c = 0x00; break;
+>   default       : c = 0x00; break;
+> }
+>```
+> * Opérateur utile pour convertir les entiers en caractères
+> ```C
+> %
+>```
+> * Envoyer une donnée bit par bit à une horloge donnée : [shiftOut()](https://www.arduino.cc/reference/en/language/functions/advanced-io/shiftout/)
+> ```C
+> shiftOut(dataPin, clockPin, bitOrder, value)
+>```
+
+# Etape 9 : [Relax](https://www.youtube.com/watch?v=Yem_iEHiyJ0)
+
+Pour l'instant le projet s'arrête là mais n'importe qu'elle amélioration est la bienvenue !
+
+Et si vous êtes arrivés là juste et en scrollant en vous disant que c'est trop dur, que vous n'y arriverez jamais, eh bien il n'y a qu'en essayant qu'on peut réussir !
+
+<p align="center">
+
+  <img src="https://media.giphy.com/media/seWgbxf8FqJAgIkptb/giphy.gif">
+
+</p>
