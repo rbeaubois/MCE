@@ -166,11 +166,11 @@ Pour ne pas saturer le moniteur il serait intéressant de trouver une solution q
 
 # Etape 8 : Afficher le tempo sur l'afficheur 7 segments
 
-Tout d'abord fécilitations aux grands baroudeurs et baroudeuses qui ont survécus jusqu'ici. On va maintenant s'attaquer à l'afficheur 7 segments (avec beaucoup de lecture :) ) qui on va le voir sera un peu fastidieux à gérer qu'avec le FPGA. Pourquoi ? Parce que les architectures sont différentes et que l'Arduino ne permet pas faire de vrai parallélisme, il deveint donc moins évident de rafraichir les digits. Heuresement, grâce au timers vus en Etape 3 on pourra s'en sortir.
+Tout d'abord félicitations aux grands baroudeurs et baroudeuses qui ont survécus jusqu'ici. On va maintenant s'attaquer à l'afficheur 7 segments (en commençant avec un peu de lecture) qui on va le voir sera un peu plus fastidieux à gérer qu'en le FPGA. Pourquoi ? Parce que les architectures sont différentes et que l'Arduino ne permet pas faire de vrai parallélisme ce qui complique la tâche de rafraîchissement des digits. Heuresement, grâce aux timers vus en Etape 3 on pourra s'en sortir.
 
-Pour rappel, un afficheur 7 segments avec 4 digits nécessiterait 28 pins pour être contrôlé. Une solution pour pallier ce problème et celle qui est choisit sur le shield est l'utilisation est l'usage d'un registre à décalage. Les doux souvenirs de vos TP de VHDL devraient vous rappeler qu'un registre décalage permet simplement d'envoyer des bits un par un et de conserver les valeurs précédentes dans des registres. Au final, avec une pin on peut donc gérer plusieurs broches.
+Pour rappel, un afficheur 7 segments avec 4 digits nécessiterait 28 pins pour être contrôlé. Une solution pour pallier ce problème et celle adoptée sur le shield est l'utilisation d'un registre à décalage. Les doux souvenirs de vos TP de VHDL devraient vous rappeler qu'un registre décalage permet d'envoyer une donnée bit par bit en conservant les valeurs précédentes dans des registres. Au final, on peut donc plusieurs broches à partir d'une seule.
 
-Sur votre shield il y a deux registres à décalage 8 bits (cf [schematic](https://github.com/rbeaubois/MCE/blob/master/Arduino/ressources/shield_vma209/schematic_vma209.pdf)), un pour sélectionner le digit et un pour gérer les 7 segments d'un digit. En s'aidant des [exemples](https://github.com/rbeaubois/MCE/tree/master/Arduino/ressources/shield_vma209/exemples) et du schematic vous devriez pouvoir vous en sortir.
+Sur votre shield il y a deux registres à décalage 8 bits (cf [schematic](https://github.com/rbeaubois/MCE/blob/master/Arduino/ressources/shield_vma209/schematic_vma209.pdf)), un pour la sélection du digit et un pour la gestion des 7 segments d'un digit. En s'aidant des [exemples](https://github.com/rbeaubois/MCE/tree/master/Arduino/ressources/shield_vma209/exemples) et du schematic vous devriez pouvoir vous en sortir.
 
 > **Aide**
 > * Une syntaxe utile pour faire correspondre données et caractères à afficher : [switch](https://www.arduino.cc/reference/en/language/structure/control-structure/switchcase/)
@@ -195,7 +195,7 @@ Sur votre shield il y a deux registres à décalage 8 bits (cf [schematic](https
 
 Pour l'instant le projet s'arrête là mais n'importe qu'elle amélioration est la bienvenue !
 
-Et si vous êtes arrivés là juste et en scrollant en vous disant que c'est trop dur, que vous n'y arriverez jamais, eh bien il n'y a qu'en essayant qu'on peut réussir !
+Et si vous êtes arrivés là juste en scrollant et en vous disant que c'est trop dur, que vous n'y arriverez jamais, eh bien il n'y a qu'en essayant et persévérant qu'on peut réussir !
 
 <p align="center">
 
