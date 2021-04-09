@@ -166,7 +166,7 @@ Pour ne pas saturer le moniteur il serait intéressant de trouver une solution q
 
 # Etape 8 : Afficher le tempo sur l'afficheur 7 segments
 
-Tout d'abord félicitations aux grands baroudeurs et baroudeuses qui ont survécus jusqu'ici. On va maintenant s'attaquer à l'afficheur 7 segments (en commençant avec un peu de lecture) qui on va le voir sera un peu plus fastidieux à gérer qu'en le FPGA. Pourquoi ? Parce que les architectures sont différentes et que l'Arduino ne permet pas faire de vrai parallélisme ce qui complique la tâche de rafraîchissement des digits. Heuresement, grâce aux timers vus en Etape 3 on pourra s'en sortir.
+Tout d'abord félicitations aux grands baroudeurs et baroudeuses qui ont survécus jusqu'ici. On va maintenant s'attaquer à l'afficheur 7 segments (en commençant avec un peu de lecture) qui on va le voir sera un peu plus fastidieux à gérer qu'en FPGA. Pourquoi ? Parce que les architectures sont différentes et que l'Arduino ne permet pas faire de vrai parallélisme ce qui complique la tâche de rafraîchissement des digits. Heuresement, grâce aux timers vus en Etape 3 on pourra s'en sortir.
 
 Pour rappel, un afficheur 7 segments avec 4 digits nécessiterait 28 pins pour être contrôlé. Une solution pour pallier ce problème et celle adoptée sur le shield est l'utilisation d'un registre à décalage. Les doux souvenirs de vos TP de VHDL devraient vous rappeler qu'un registre décalage permet d'envoyer une donnée bit par bit en conservant les valeurs précédentes dans des registres. Au final, on peut donc plusieurs broches à partir d'une seule.
 
