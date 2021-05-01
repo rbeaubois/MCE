@@ -84,19 +84,19 @@ Maintenant il ne vous reste plus qu'à appliquer cette modification partout !
 >```
 > * Un exemple d'utilisation
 > ```C++
+> #define T_ACTION1 100  // Période d'exécution de l'action 1 (#define = pas de mémoire consommée)
+> #define T_ACTION2 500  // Période d'exécution de l'action 2 (#define = pas de mémoire consommée)
 > unsigned long it_time, t_last_action1, t_last_action2;  // Compteurs de temps
-> unsigned long t_action1 = 100;  // Période d'exécution de l'action 1  
-> unsigned long t_action2 = 500;  // Période d'exécution de l'action 2
 > 
 > void loop(){
 >   it_time = millis(); // Temps écoulé jusqu'à cette itération
 >   
->   if((it_time-t_last_action1) > t_action1){
+>   if((it_time-t_last_action1) > T_ACTION1){
 >     t_last_action1 = it_time; // Rafraichissement du compteur
 >     action1() // Exécution de l'action 1
 >   }
 > 
->   if((it_time-t_last_action2) > t_action2){
+>   if((it_time-t_last_action2) > T_ACTION2){
 >     t_last_action2 = it_time; // Rafraichissement du compteur
 >     action2() // Exécution de l'action 1
 >   }
