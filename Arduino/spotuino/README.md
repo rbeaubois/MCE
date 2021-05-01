@@ -94,13 +94,13 @@ Maintenant il ne vous reste plus qu'à appliquer cette modification partout !
 >   // Action réalisée toutes les T_ACTION1 ms
 >   if((it_time-t_last_action1) > T_ACTION1){
 >     t_last_action1 = it_time; // Rafraichissement du compteur
->     action1() // Exécution de l'action 1
+>     action1()                 // Exécution de l'action 1
 >   }
 > 
 >   // Action réalisée toutes les T_ACTION2 ms
 >   if((it_time-t_last_action2) > T_ACTION2){
 >     t_last_action2 = it_time; // Rafraichissement du compteur
->     action2() // Exécution de l'action 1
+>     action2()                 // Exécution de l'action 2
 >   }
 > }
 > // Trouverez-vous la limitation de cette façon de faire et comment y remédier ? :)
