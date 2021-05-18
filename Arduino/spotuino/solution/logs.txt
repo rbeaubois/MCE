@@ -1,0 +1,28 @@
+/***************************************************************************
+* Author   : R. Beaubois
+* Created  : 28/01/2021
+* Edited   : 11/03/2021
+*
+* >>> logs.txt : notes pour le projet spotuino
+*
+* Comments : not real logs but dummy of versioning logs
+*****************************************************************************/
+
+V1.11
+  - Add mute functions to handle differents peripherals as sound output
+V1.12
+  - Allows multiple sound output in the same time
+V1.2
+  - Songs handled in header files rather than in main file
+V1.21
+  - Add 7 segments display
+V2.0
+  - All delay replaced by timers
+V2.01
+  - Push buttons keep value and debounce filter
+V2.11
+  - Add led chaser
+V2.12
+  - Add tunable BPM using potentiometer toggled by button 2
+  - Display BPM on segments
+
