@@ -3,8 +3,8 @@
 
 # Contenu
 * **tpX** : exemples de codes pour les exercices de TP
-* **spotuino** : projet optionnel sur temps libre
-* **oshibotan** : projet optionnel sur temps libre
+* **spotuino** : projet optionnel sur temps libre ~ Lecteur de musique pour Arduino
+* **oshibotan** : projet optionnel sur temps libre ~ Jeu autour du bouton poussoir
 * **ressources** : documentation et codes exemples utiles pour les TP
 
 > Dans les exemples de codes pour les **tpX** vous trouverez plusieurs versions toutes fonctionnelles mais écritent différemment.
